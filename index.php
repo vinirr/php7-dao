@@ -19,7 +19,12 @@ require_once("config.php");
 
 
 //Carrega uma lista de usuarios buscando pelo login
-$search = Usuario::search('vrr20');
-echo json_encode($search);
+// $search = Usuario::search('vrr20');
+// echo json_encode($search);
 
+
+//Carrega um usuário usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("vrr20", "2133");
+echo $usuario;
 ?>
