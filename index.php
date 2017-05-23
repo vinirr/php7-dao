@@ -2,8 +2,11 @@
 
 require_once("config.php");
 
-$jose = new Usuario();
-$jose->loadById(4);
-echo $jose;
+// $sql = new Sql();
+// $result = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(":ID"=>3));
+// echo json_encode($result);
 
+$usuario = new Usuario();
+$usuario->loadById(3);
+echo $usuario;
 ?>
