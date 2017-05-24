@@ -23,7 +23,7 @@ require_once("config.php");
 // echo json_encode($search);
 
 
-//Carrega um usuário usando o login e a senha
+// Carrega um usuário usando o login e a senha
 // $usuario = new Usuario();
 // $usuario->login("vrr20", "2133");
 // echo $usuario;
@@ -35,10 +35,17 @@ require_once("config.php");
 // echo $usuario;
 
 
-//
+// Altera um usuário
+// $usuario = new Usuario();
+// $usuario->loadById(6);
+// $usuario->update("novoLogin", "novaSenha");
+// echo $usuario;
+
+
+// Deleta um usuário
 $usuario = new Usuario();
 $usuario->loadById(6);
-$usuario->update("novoLogin", "novaSenha");
+$usuario->delete();
 echo $usuario;
 
 ?>
