@@ -9,7 +9,7 @@ require_once("config.php");
 
 //Carrega um usuário no objeto
 // $usuario = new Usuario();
-// $usuario->loadById(3);
+// $usuario->loadById(4);
 // echo $usuario;
 
 
@@ -24,7 +24,21 @@ require_once("config.php");
 
 
 //Carrega um usuário usando o login e a senha
+// $usuario = new Usuario();
+// $usuario->login("vrr20", "2133");
+// echo $usuario;
+
+
+// Carrega e insere usuario
+// $usuario = new Usuario("maciotagem", "1234");
+// $usuario->insert();
+// echo $usuario;
+
+
+//
 $usuario = new Usuario();
-$usuario->login("vrr20", "2133");
+$usuario->loadById(6);
+$usuario->update("novoLogin", "novaSenha");
 echo $usuario;
+
 ?>
