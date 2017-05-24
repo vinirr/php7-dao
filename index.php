@@ -24,7 +24,14 @@ require_once("config.php");
 
 
 //Carrega um usuário usando o login e a senha
-$usuario = new Usuario();
-$usuario->login("vrr20", "2133");
-echo $usuario;
+// $usuario = new Usuario();
+// $usuario->login("vrr20", "2133");
+// echo $usuario;
+
+$aluno = new Usuario();
+$aluno->setDeslogin("maciota");
+$aluno->setDessenha("123");
+$aluno->insert();
+echo $aluno;
+
 ?>
